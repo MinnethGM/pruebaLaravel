@@ -10,6 +10,25 @@
 </head>
 <body>
     <h1> Hola! </h1>
-    <p> Esto es una pagina html </p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tlefono</th>
+                <th>Correo</th>
+            </tr>
+        </thead>
+    <tbody>
+    @foreach($contactos as $contacto)
+        <tr>
+            <td>{{ $contacto->nombre}}</td>
+            <td>{{ $contacto->telefono}}</td>
+            <td>{{ $contacto->contacto}}</td>
+        </tr>
+    @endforeach
+    </tbody>
+    
+</table>
 </body>
 </html>
